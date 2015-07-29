@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PolicyViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webVeiwPolicy" destination="YBW-mZ-Sgp" id="A8I-F8-1kE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBW-mZ-Sgp">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" address="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="RRu-qJ-syQ"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="YBW-mZ-Sgp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LCO-CF-9p3"/>
+                <constraint firstAttribute="bottom" secondItem="YBW-mZ-Sgp" secondAttribute="bottom" id="NNy-sW-lue"/>
+                <constraint firstItem="YBW-mZ-Sgp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XKP-4A-hix"/>
+                <constraint firstAttribute="trailing" secondItem="YBW-mZ-Sgp" secondAttribute="trailing" id="Xdi-tY-xxQ"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="-32" y="291"/>
+        </view>
+    </objects>
+</document>
