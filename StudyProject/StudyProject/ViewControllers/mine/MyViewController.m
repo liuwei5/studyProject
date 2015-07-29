@@ -35,27 +35,6 @@
     
     [self setupBaseDataPropertiesForView];
     [self setupBaseUiPropertiesForView];
-    
-    NSInteger i = 3;
-    switch (i) {
-        case 1:
-        {
-            
-        }
-        case 2:
-        {
-            NSLog(@"aaaaaaaa");
-        }
-        case 3:
-        {
-            NSLog(@"bbbbb");
-            break;
-        }
-            
-            
-        default:
-            break;
-    }
 }
 
 - (void)setupBaseDataPropertiesForView
