@@ -20,11 +20,15 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Qiniu (7.0.11.1):
+    - AFNetworking (~> 2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.3)
+  - Qiniu (~> 7.0.11.1)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  Qiniu: 080a6728b969f6b0e77c9de574ede37e78b0912b
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.38.0
