@@ -44,7 +44,7 @@
         drawerController.backgroundView = backgroundImageView;
         self.window.rootViewController = drawerController;
     }
-    else
+    else//merge 测试
     {
         yrSldeController = [[YRSideViewController alloc] init];
         yrSldeController.rootViewController = nav;
