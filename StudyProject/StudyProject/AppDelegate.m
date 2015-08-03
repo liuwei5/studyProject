@@ -35,7 +35,7 @@
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bgImg"]];
     [backgroundImageView setContentMode:UIViewContentModeScaleToFill];
     
-    if(ENVIRENTMENT == 0)
+    if(ENVIRENTMENT == 1)//branch分支 测试
     {
         XHDrawerController *drawerController = [[XHDrawerController alloc] init];
         drawerController.springAnimationOn = YES;
