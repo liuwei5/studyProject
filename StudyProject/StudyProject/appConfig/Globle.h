@@ -9,6 +9,8 @@
 #ifndef StudyProject_Globle_h
 #define StudyProject_Globle_h
 
+#define WeakSelf(weakSelf) __weak __typeof(& *self)weakSelf = self;
+
 #define HOST_DEFAULT_IP @"www.baidu.com"
 
 // 0  -  侧滑效果1     1 - 侧滑效果2

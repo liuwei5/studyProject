@@ -16,6 +16,15 @@
    #import "Globle.h"
    #import "Utility.h"
    #import <CocoaLumberjack/CocoaLumberjack.h>
+
+
+   #import "Masonry.h"
+////define this constant if you want to use Masonry without the 'mas_' prefix
+//#define MAS_SHORTHAND
+////define this constant if you want to enable auto-boxing for default syntax
+//#define MAS_SHORTHAND_GLOBALS
+
+
    #import "AppDelegate.h"
    #import "XHDrawerController.h"//侧滑缩放效果
 

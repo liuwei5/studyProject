@@ -28,6 +28,8 @@
     [super viewDidLoad];
     
     [self setupBaseUiPropertiesForView];
+    
+    [self useMarsonAutoLayout];
 }
 
 - (void)setupBaseUiPropertiesForView
@@ -108,6 +110,38 @@
     }else{
         [sideViewController setRootViewMoveBlock:nil];
     }
+}
+
+- (void)useMarsonAutoLayout
+{
+    WeakSelf(selView);
+    
+    UIView *firstView = [UIView new];
+    firstView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:firstView];
+    
+    UIView *secondView = [UIView new];
+    secondView.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:secondView];
+    
+    UIView *tirdView = [UIView new];
+    tirdView.backgroundColor = [UIColor greenColor];
+    [self.view addSubview:tirdView];
+    
+    [firstView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(selView.view);
+        make.size.mas_equalTo(CGSizeMake(200, 100));
+    }];
+    
+    [secondView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(firstView.center.y);
+        make.centerX.mas_equalTo(firstView.center.x);
+        make.size.mas_equalTo(CGSizeMake(250, 20));
+    }];
+    
+    [tirdView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(secondView).with.insets(UIEdgeInsetsMake(2, 2, 2, 2));
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
