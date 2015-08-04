@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>277B0C4BF83B4D8D1DEC8548033D7128</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3F83CEC3BEAB1A06F909D45465CB083B</key>
+		<key>816DCC803EC52048CC139F10235A974E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>8A29E49B7E033110B8AD4355A708FCE8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B12EAAD0645E298353446430F8D8888B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5B472269BCBCF6BED526D6F0DFB1CAF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

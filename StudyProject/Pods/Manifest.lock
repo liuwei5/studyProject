@@ -20,15 +20,25 @@ PODS:
   - AFNetworking/UIKit (2.5.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - CocoaLumberjack (2.0.1):
+    - CocoaLumberjack/Default (= 2.0.1)
+    - CocoaLumberjack/Extensions (= 2.0.1)
+  - CocoaLumberjack/Core (2.0.1)
+  - CocoaLumberjack/Default (2.0.1):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.1):
+    - CocoaLumberjack/Default
   - Qiniu (7.0.11.1):
     - AFNetworking (~> 2.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5.3)
+  - CocoaLumberjack (~> 2.0.1)
   - Qiniu (~> 7.0.11.1)
 
 SPEC CHECKSUMS:
   AFNetworking: e1d86c2a96bb5d2e7408da36149806706ee122fe
+  CocoaLumberjack: 019d1361244274a6138c788c6cb80baabc13fb8f
   Qiniu: 080a6728b969f6b0e77c9de574ede37e78b0912b
 
 COCOAPODS: 0.38.0
