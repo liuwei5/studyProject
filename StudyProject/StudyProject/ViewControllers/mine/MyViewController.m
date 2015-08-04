@@ -97,6 +97,13 @@
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *titleStr = cell.textLabel.text;
+    
+    DDLogInfo(@"DDLogInfo     %@" , titleStr);
+    DDLogDebug(@"DDLogDebug     %@" , titleStr);
+    DDLogWarn(@"DDLogWarn     %@" , titleStr);
+    DDLogError(@"DDLogError     %@" , titleStr);
+    DDLogVerbose(@"DDLogVerbose     %@" , titleStr);
+    
     if([titleStr isEqualToString:@"计步器"])
     {
         CountStepViewController *stepVC = [[CountStepViewController alloc] init];

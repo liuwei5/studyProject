@@ -9,12 +9,20 @@
 #ifndef StudyProject_StudyProject_Prefix_pch
 #define StudyProject_StudyProject_Prefix_pch
 
+
+
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
    #import "Globle.h"
    #import "Utility.h"
+   #import <CocoaLumberjack/CocoaLumberjack.h>
    #import "AppDelegate.h"
    #import "XHDrawerController.h"//侧滑缩放效果
 
+    #ifdef DEBUG
+    static const int ddLogLevel = DDLogLevelVerbose;
+    #else
+    static const int ddLogLevel = DDLogLevelError;
+    #endif
 
 #endif
