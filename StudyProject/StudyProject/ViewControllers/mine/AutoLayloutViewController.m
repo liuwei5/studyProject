@@ -13,6 +13,7 @@
 @end
 
 @implementation AutoLayloutViewController
+@synthesize autoLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,6 +24,8 @@
 - (void)setupBaseUiPropertiesForView
 {
     self.title = @"自动布局";
+    
+    autoLabel.text = @"10000000";
     
     UIBarButtonItem *btnNavBack = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(clickNavBackBtn)];
     btnNavBack.tintColor = [UIColor whiteColor];

@@ -14,4 +14,6 @@
     CLLocationManager *locManager;
 }
 
+@property (weak, nonatomic) IBOutlet UILabel *autoLabel;
+
 @end
