@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreMotion/CoreMotion.h>
+
 
 @interface CountStepViewController : UIViewController
-
-@property (nonatomic , strong) CMPedometer *stepCounter;
 
 @end
