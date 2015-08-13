@@ -32,8 +32,8 @@
     
     [self setupBaseUiPropertiesForView];
     
-    [self useCMStepCounterData];
-    [self useCMPedometerData];
+//    [self useCMStepCounterData];
+//    [self useCMPedometerData];
     [self useHealthKitData];
 }
 
@@ -182,7 +182,7 @@
     calendar.timeZone = timeZone;
     
     NSDate *startDate = [calendar dateFromComponents:comps];
-    //    startDate = [NSDate dateWithTimeInterval:-1200 sinceDate:startDate];
+    startDate = [NSDate dateWithTimeInterval:-86400 sinceDate:startDate];
     
     
     if ([HKHealthStore isHealthDataAvailable]) {
@@ -213,6 +213,10 @@
             
             NSSortDescriptor *timeSortDescription = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
             NSPredicate * predicate = [HKQuery predicateForSamplesWithStartDate:startDate endDate:endDate options:HKQueryOptionStrictStartDate];
+            
+           // NSPredicate *predicate1 = [HKQuery predicateForObjectsWithMetadataKey:HKMetadataKeyWasUserEntered allowedValues:@[true]];
+           //HKQuery.predicateForObjectsWithMetadataKey(HKMetadataKeyWasUserEntered, allowedValues: [true])
+            
             HKSampleQuery    *query = [[HKSampleQuery alloc] initWithSampleType:type
                                                                       predicate:predicate
                                                                           limit:HKObjectQueryNoLimit
@@ -224,7 +228,7 @@
                                                                          long totalSteps=0;
                                                                          for(HKQuantitySample *quantitySample in result) {
                                                                              // your code here
-                                                                             
+                                                                    
                                                                              
                                                                              HKQuantity  *quantity=quantitySample.quantity;
                                                                              //HKQuantity *quantity = quantitySample.quantity;

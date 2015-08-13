@@ -64,6 +64,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    [self useUIPasteboard];
+    
     return YES;
 }
 
@@ -97,6 +99,25 @@
 - (void)appShowMainTabBar
 {
     ApplicationDelegate.mainTabViewCtr.tabBar.hidden = NO;
+}
+
+- (void)useUIPasteboard
+{
+    UIPasteboard *plasteBoard = [UIPasteboard generalPasteboard];
+    NSLog(@"plasteBoard Str :  %@" , plasteBoard.string);
+    
+    if([plasteBoard.string isEqualToString:@"平安人寿"])
+    {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+        }];
+        
+        UIAlertController *alertCtr = [UIAlertController alertControllerWithTitle:@"提示" message:[NSString stringWithFormat:@"有匹配的内容< %@ >" , plasteBoard.string] preferredStyle:UIAlertControllerStyleAlert];
+        [alertCtr addAction:action];
+        [self.window.rootViewController presentViewController:alertCtr animated:YES completion:^{
+            
+        }];
+    }
 }
 
 @end
