@@ -32,7 +32,7 @@
     [super viewDidLoad];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    
+
     [self setupBaseDataPropertiesForView];
     [self setupBaseUiPropertiesForView];
 }

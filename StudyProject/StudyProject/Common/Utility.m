@@ -157,4 +157,18 @@
     }];
 }
 
++ (CGFloat)getTextHeightWithText:(NSString *)text width:(CGFloat)width font:(CGFloat)fontsize
+{
+    
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+    CGRect rect = [text boundingRectWithSize:CGSizeMake(width, 10000) options:NSStringDrawingUsesLineFragmentOrigin attributes:[NSDictionary dictionaryWithObject:[UIFont systemFontOfSize:fontsize] forKey:NSFontAttributeName] context:nil];
+    
+    return rect.size.height;
+#else
+    CGSize size = [text sizeWithFont:[UIFont systemFontOfSize:fontsize] constrainedToSize:CGSizeMake(width, 10000)];
+    return size.height;
+#endif
+    
+}
+
 @end

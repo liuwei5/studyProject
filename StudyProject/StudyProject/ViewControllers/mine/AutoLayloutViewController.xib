@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutoLayloutViewController">
             <connections>
                 <outlet property="autoLabel" destination="qo3-ke-5FW" id="MJJ-KH-JbZ"/>
+                <outlet property="autoLabelHeight" destination="vlT-RF-prO" id="gPi-tX-l4C"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -108,7 +109,7 @@
                     </state>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试数据：" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xbr-T7-l4R">
-                    <rect key="frame" x="162.5" y="298" width="85" height="20.5"/>
+                    <rect key="frame" x="162" y="298" width="85" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.34239297099303623" green="0.51701919618765135" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -136,9 +137,19 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vlT-RF-prO">
+                    <rect key="frame" x="20" y="304" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="brs-fe-fQj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.99215686270000003" green="0.32156862749999998" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="vlT-RF-prO" secondAttribute="bottom" constant="243" id="228-0e-bBS"/>
                 <constraint firstItem="qo3-ke-5FW" firstAttribute="leading" secondItem="Xbr-T7-l4R" secondAttribute="trailing" id="2vr-Rf-u9T"/>
                 <constraint firstItem="VTJ-3I-GWA" firstAttribute="baseline" secondItem="ZkP-wN-DcY" secondAttribute="baseline" id="Bwe-Qh-Trr"/>
                 <constraint firstItem="qo3-ke-5FW" firstAttribute="baseline" secondItem="Xbr-T7-l4R" secondAttribute="baseline" id="Den-XG-Se8"/>
@@ -171,6 +182,7 @@
                 <constraint firstItem="5X3-7A-q43" firstAttribute="baseline" secondItem="qo3-ke-5FW" secondAttribute="baseline" id="qei-0u-7Br"/>
                 <constraint firstItem="Ixw-Jb-KNZ" firstAttribute="width" secondItem="yl4-X7-s4D" secondAttribute="width" id="ra3-qi-9TQ"/>
                 <constraint firstItem="8f8-gV-Add" firstAttribute="top" secondItem="WyK-PZ-iBq" secondAttribute="bottom" constant="39.5" id="tPn-cR-AHh"/>
+                <constraint firstItem="vlT-RF-prO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="tqc-8s-fCM"/>
                 <constraint firstAttribute="trailing" secondItem="8f8-gV-Add" secondAttribute="trailing" constant="40" id="vq4-vY-y5a"/>
                 <constraint firstItem="WyK-PZ-iBq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="41" id="wSh-EE-7Nx"/>
                 <constraint firstAttribute="trailing" secondItem="ZkP-wN-DcY" secondAttribute="trailing" constant="46" id="xYj-1g-93X"/>
@@ -182,7 +194,7 @@
                     <exclude reference="cpJ-xP-vY9"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="-321" y="344"/>
+            <point key="canvasLocation" x="-415" y="331"/>
         </view>
     </objects>
 </document>

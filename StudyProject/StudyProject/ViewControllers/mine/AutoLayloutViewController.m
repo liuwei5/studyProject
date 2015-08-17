@@ -10,6 +10,8 @@
 
 @interface AutoLayloutViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *autoLabelHeight;
+
 @end
 
 @implementation AutoLayloutViewController
@@ -26,6 +28,7 @@
     self.title = @"自动布局";
     
     autoLabel.text = @"10000000";
+    _autoLabelHeight.text = @"换行测试，多行";
     
     UIBarButtonItem *btnNavBack = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:self action:@selector(clickNavBackBtn)];
     btnNavBack.tintColor = [UIColor whiteColor];

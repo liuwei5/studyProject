@@ -36,4 +36,6 @@
 + (void)showBDKNotifyHUD:(NSString *)messageStr inView:(UIView *)showView;
 + (void)showBDKNotifyHUD:(NSString *)messageStr;
 
++ (CGFloat)getTextHeightWithString:(NSString *)string width:(CGFloat)width font:(CGFloat)fontsize;
+
 @end

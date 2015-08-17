@@ -31,9 +31,9 @@
     
     //[self useMarsonAutoLayout];
     
-    //[self useMarsonAutoLayoutMiddle];
+    [self useMarsonAutoLayoutMiddle];
     
-    [self useMarsonAutoLayoutHighier];
+    //[self useMarsonAutoLayoutHighier];
 }
 
 - (void)setupBaseUiPropertiesForView
