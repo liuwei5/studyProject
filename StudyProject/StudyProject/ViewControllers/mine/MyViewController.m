@@ -14,6 +14,8 @@
 #import "AutoLayloutViewController.h"
 #import "SwaipViewController.h"
 #import "StoryBoardViewController.h"
+#import "MasonryViewController.h"
+#import "StudyProject-swift.h"
 
 @interface MyViewController ()
 
@@ -40,7 +42,7 @@
 - (void)setupBaseDataPropertiesForView
 {
     arrData = [[NSMutableArray alloc] initWithCapacity:5];
-    [arrData addObjectsFromArray:[NSArray arrayWithObjects:@"计步器",@"CollectionView",@"卡片随意拨",@"发呆动画",@"自动布局",@"push侧滑",@"storyBoard",nil]];
+    [arrData addObjectsFromArray:[NSArray arrayWithObjects:@"计步器",@"CollectionView",@"卡片随意拨",@"发呆动画",@"自动布局",@"push侧滑",@"storyBoard",@"Masonry", @"MainSwift", nil]];
 }
 
 - (void)setupBaseUiPropertiesForView
@@ -138,6 +140,16 @@
     {
         StoryBoardViewController *sbVC = [[UIStoryboard storyboardWithName:@"StoryBoardViewController" bundle:nil] instantiateViewControllerWithIdentifier:@"storyBoardViewController"];
         [self.navigationController pushViewController:sbVC animated:YES];
+    }
+    else if ([titleStr isEqualToString:@"Masonry"])
+    {
+        MasonryViewController *masonryVC = [[MasonryViewController alloc] init];
+        [self.navigationController pushViewController:masonryVC animated:YES];
+    }
+    else if ([titleStr isEqualToString:@"MainSwift"])
+    {
+        MainSwift *mainSwift = [[MainSwift alloc] init];
+        [self.navigationController pushViewController:mainSwift animated:YES];
     }
 }
 
