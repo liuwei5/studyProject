@@ -56,7 +56,7 @@
         yrSldeController.rootViewController = nav;
         yrSldeController.leftViewController = leftTabCtr;
         //yrSldeController.rightViewController = rightViewController;
-        yrSldeController.leftViewShowWidth = 300;
+        yrSldeController.leftViewShowWidth = 280;
         yrSldeController.needSwipeShowMenu = true;//默认开启的可滑动展示
         self.window.rootViewController = yrSldeController;
     }

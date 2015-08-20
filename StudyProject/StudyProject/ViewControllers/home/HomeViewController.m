@@ -21,7 +21,12 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [ApplicationDelegate appShowMainTabBar];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+   [ApplicationDelegate appShowMainTabBar];
 }
 
 - (void)viewDidLoad {
@@ -53,7 +58,9 @@
 
 - (void)left
 {
-    [self.drawerController toggleDrawerSide:XHDrawerSideLeft animated:YES completion:NULL];
+    [self.drawerController toggleDrawerSide:XHDrawerSideLeft animated:YES completion:^(BOOL finished) {
+        
+    }];
 }
 
 - (void)right

@@ -14,7 +14,7 @@
 #define HOST_DEFAULT_IP @"www.baidu.com"
 
 // 0  -  侧滑效果1     1 - 侧滑效果2
-#define ENVIRENTMENT 1
+#define ENVIRENTMENT 0
 
 #define ApplicationDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
