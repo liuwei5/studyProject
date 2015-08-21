@@ -54,6 +54,13 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - public
+
+-(void)clickCellName:(SuccessBlock)block clickCellName:(NSString *)str
+{
+    block(str);
+}
+
 #pragma mark - UIGestureRecognizer Delegate
 - (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
 {
@@ -105,6 +112,10 @@
     DDLogWarn(@"DDLogWarn     %@" , titleStr);
     DDLogError(@"DDLogError     %@" , titleStr);
     DDLogVerbose(@"DDLogVerbose     %@" , titleStr);
+    
+    [self clickCellName:^(NSString *result) {
+        NSLog(@"点击了 :%@  cell" , result);
+    } clickCellName:titleStr];
     
     if([titleStr isEqualToString:@"计步器"])
     {

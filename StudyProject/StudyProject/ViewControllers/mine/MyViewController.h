@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^SuccessBlock) (NSString *result);
+
 @interface MyViewController : UIViewController<UITableViewDataSource , UITableViewDelegate , UIGestureRecognizerDelegate>
 
 @property (nonatomic , weak) IBOutlet UITableView *tableViewOfMine;
