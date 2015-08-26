@@ -153,7 +153,8 @@
     NSString *zeroStr = [NSString stringWithFormat:@"%@00:00:00",zeroDateStr];
     NSDate *zeroDate = [df dateFromString:zeroStr];
     
-    [self.cmPedometerCounter queryPedometerDataFromDate:zeroDate toDate:localeDate withHandler:^(CMPedometerData * __nullable pedometerData, NSError * __nullable error) {
+    
+    [self.cmPedometerCounter queryPedometerDataFromDate:zeroDate toDate:localeDate withHandler:^(CMPedometerData *  pedometerData, NSError *error) {
         NSLog(@"usePedometer:%@", pedometerData);
         NSInteger steps = [[pedometerData numberOfSteps] integerValue];
         NSLog(@"total steps:%ld", steps);
@@ -205,7 +206,7 @@
                                    nil];
         
         HKQuantityType *type = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierStepCount];
-        void (^completion)(BOOL success, NSError * __nullable error) = ^(BOOL success, NSError * __nullable error) {
+        void (^completion)(BOOL success, NSError *error) = ^(BOOL success, NSError *error) {
             
             if(!success) {
                 return;
