@@ -27,13 +27,15 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-   [ApplicationDelegate appShowMainTabBar];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    self.hidesBottomBarWhenPushed = YES;
 
     [self setupBaseDataPropertiesForView];
     [self setupBaseUiPropertiesForView];
@@ -102,7 +104,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
-    [ApplicationDelegate appHiddenMainTabBar];
     
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     NSString *titleStr = cell.textLabel.text;

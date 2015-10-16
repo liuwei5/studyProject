@@ -29,7 +29,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    self.hidesBottomBarWhenPushed = YES;
     [self setupBaseUiPropertiesForView];
     
 //    [self useCMStepCounterData];

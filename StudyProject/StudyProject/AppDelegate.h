@@ -11,6 +11,12 @@
 #import "LeftTabViewController.h"
 #import "YRSideViewController.h"//侧滑缩放效果2
 
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else
+static const int ddLogLevel = DDLogLevelInfo;
+#endif
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
@@ -20,8 +26,6 @@
 @property (nonatomic , strong) MainTabViewController *mainTabViewCtr;
 @property (nonatomic , strong) LeftTabViewController *leftTabCtr;
 
-- (void)appHiddenMainTabBar;
-- (void)appShowMainTabBar;
 
 @end
 

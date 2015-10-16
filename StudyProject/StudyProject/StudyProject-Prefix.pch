@@ -27,11 +27,4 @@
 
    #import "AppDelegate.h"
    #import "XHDrawerController.h"//侧滑缩放效果
-
-    #ifdef DEBUG
-    static const int ddLogLevel = DDLogLevelVerbose;
-    #else
-    static const int ddLogLevel = DDLogLevelError;
-    #endif
-
 #endif

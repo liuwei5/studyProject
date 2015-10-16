@@ -19,16 +19,6 @@
 @synthesize switchSwapGesture;
 @synthesize switchUserDefAnim;
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-   [ApplicationDelegate appShowMainTabBar];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,6 +28,8 @@
 - (void)setupBaseUiPropertiesForView
 {
     self.title = @"首页";
+    
+    
     
     if(ENVIRENTMENT == 0)
     {
@@ -84,8 +76,8 @@
 
 
 - (IBAction)clickPushBtn:(id)sender {
-    [ApplicationDelegate appHiddenMainTabBar];
     HomePushViewController *homePush = [[HomePushViewController alloc] init];
+    homePush.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:homePush animated:YES];
 }
 

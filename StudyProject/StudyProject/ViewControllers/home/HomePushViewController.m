@@ -30,7 +30,6 @@
 
 - (void)clickNavBackBtn
 {
-    [ApplicationDelegate appShowMainTabBar];
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)didReceiveMemoryWarning {

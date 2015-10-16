@@ -156,6 +156,7 @@
 		1BB454B11B8DC2C800F7A355 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = paDev;
 				TargetAttributes = {
@@ -409,6 +410,7 @@
 				1BB454DA1B8DC2C800F7A355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BB454DB1B8DC2C800F7A355 /* Build configuration list for PBXNativeTarget "SwiftStudyTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				1BB454DD1B8DC2C800F7A355 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

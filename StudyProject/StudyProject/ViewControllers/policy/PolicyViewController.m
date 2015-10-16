@@ -17,15 +17,14 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [ApplicationDelegate appShowMainTabBar];
+
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"保单";
     
-   // self.navigationController.navigationBarHidden = YES;
-    [ApplicationDelegate appHiddenMainTabBar];
+    self.hidesBottomBarWhenPushed = YES;
     
     NSString *requestStr = @"http://photo.energytrust.com.cn/batch.php/Home/Mobile/index.html";
     [webVeiwPolicy loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:requestStr]]];

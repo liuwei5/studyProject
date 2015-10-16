@@ -26,8 +26,15 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    [DDLog addLogger:[DDASLLogger sharedInstance]];
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDLog addLogger:[DDASLLogger sharedInstance]];//发送日志语句到苹果的日志系统
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];//发送日志语句到Xcode控制台
+    
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
+    fileLogger.rollingFrequency = 60 * 60 * 24;
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:fileLogger];
     
     [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"Menubar@2x.png"] forBarPosition:UIBarPositionTopAttached barMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObject:[UIColor whiteColor] forKey:NSForegroundColorAttributeName]];
@@ -91,16 +98,6 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)appHiddenMainTabBar
-{
-    ApplicationDelegate.mainTabViewCtr.tabBar.hidden = YES;
-}
-
-- (void)appShowMainTabBar
-{
-    ApplicationDelegate.mainTabViewCtr.tabBar.hidden = NO;
-}
-
 - (void)useUIPasteboard
 {
     UIPasteboard *plasteBoard = [UIPasteboard generalPasteboard];
@@ -118,6 +115,10 @@
             
         }];
     }
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(60 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+    });
 }
 
 @end

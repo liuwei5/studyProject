@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B119D1C1B95882600481156 /* PARSLoggerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B119D1B1B95882600481156 /* PARSLoggerManager.m */; };
 		1B133CF81B847CDB0026EA24 /* MainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B133CF71B847CDB0026EA24 /* MainSwift.swift */; };
 		1B48D79F1A53EC400047EA5F /* Menubar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B48D7871A53EC400047EA5F /* Menubar@2x.png */; };
 		1B48D7A01A53EC400047EA5F /* testtttt.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B48D7881A53EC400047EA5F /* testtttt.png */; };
@@ -69,6 +70,8 @@
 		1BF3A24F1B8426D800593002 /* SwipeCardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3A23D1B8426D800593002 /* SwipeCardsViewController.m */; };
 		1BF3A2501B8426D800593002 /* SwipeCardsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BF3A23E1B8426D800593002 /* SwipeCardsViewController.xib */; };
 		1BF3A2531B84277400593002 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3A2521B84277400593002 /* MasonryViewController.m */; };
+		1BF41C611B95AABC0056A703 /* PARSLoggerFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C601B95AABC0056A703 /* PARSLoggerFormatter.m */; };
+		1BF41C641B96D5590056A703 /* PARSLoggerFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF41C631B96D5590056A703 /* PARSLoggerFile.m */; };
 		E2863F530B33C29B252FD430 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 540CA62C2D36B5860D7EDE71 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B119D1A1B95882600481156 /* PARSLoggerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PARSLoggerManager.h; sourceTree = "<group>"; };
+		1B119D1B1B95882600481156 /* PARSLoggerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PARSLoggerManager.m; sourceTree = "<group>"; };
 		1B133CF61B847CDB0026EA24 /* StudyProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StudyProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		1B133CF71B847CDB0026EA24 /* MainSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSwift.swift; sourceTree = "<group>"; };
 		1B48D7871A53EC400047EA5F /* Menubar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Menubar@2x.png"; sourceTree = "<group>"; };
@@ -191,6 +196,10 @@
 		1BF3A23E1B8426D800593002 /* SwipeCardsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwipeCardsViewController.xib; sourceTree = "<group>"; };
 		1BF3A2511B84277400593002 /* MasonryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		1BF3A2521B84277400593002 /* MasonryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
+		1BF41C5F1B95AABC0056A703 /* PARSLoggerFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PARSLoggerFormatter.h; sourceTree = "<group>"; };
+		1BF41C601B95AABC0056A703 /* PARSLoggerFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PARSLoggerFormatter.m; sourceTree = "<group>"; };
+		1BF41C621B96D5590056A703 /* PARSLoggerFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PARSLoggerFile.h; sourceTree = "<group>"; };
+		1BF41C631B96D5590056A703 /* PARSLoggerFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PARSLoggerFile.m; sourceTree = "<group>"; };
 		540CA62C2D36B5860D7EDE71 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		772AECCA221D552A223725B0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A1F5A063E94864C1CDBC9584 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -501,6 +510,12 @@
 			children = (
 				1BDDF1791AD5153800909CEF /* NetworkEngine.h */,
 				1BDDF17A1AD5153800909CEF /* NetworkEngine.m */,
+				1B119D1A1B95882600481156 /* PARSLoggerManager.h */,
+				1B119D1B1B95882600481156 /* PARSLoggerManager.m */,
+				1BF41C5F1B95AABC0056A703 /* PARSLoggerFormatter.h */,
+				1BF41C601B95AABC0056A703 /* PARSLoggerFormatter.m */,
+				1BF41C621B96D5590056A703 /* PARSLoggerFile.h */,
+				1BF41C631B96D5590056A703 /* PARSLoggerFile.m */,
 			);
 			path = APPEngine;
 			sourceTree = "<group>";
@@ -612,6 +627,7 @@
 		1B775E491A4844E0005EFABC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = paDev;
 				TargetAttributes = {
@@ -725,6 +741,7 @@
 				1BDDF1741AD4C3F100909CEF /* MKNetworkOperation.m in Sources */,
 				1BF3A24A1B8426D800593002 /* StoryBoardViewController.m in Sources */,
 				1BDDF1701AD4C3F100909CEF /* NSString+MKNetworkKitAdditions.m in Sources */,
+				1BF41C641B96D5590056A703 /* PARSLoggerFile.m in Sources */,
 				1BF3A2441B8426D800593002 /* CollectionViewController.m in Sources */,
 				1BDDF16E1AD4C3F100909CEF /* NSDate+RFC1123.m in Sources */,
 				1BF3A24D1B8426D800593002 /* SwaipViewController.m in Sources */,
@@ -739,6 +756,7 @@
 				1B59CE891A89E23000879949 /* ZLSwipeableView.m in Sources */,
 				1BA53E3D1A54DBA200B9343F /* Utility.m in Sources */,
 				1B48D7AE1A53EC710047EA5F /* AppDelegate.m in Sources */,
+				1B119D1C1B95882600481156 /* PARSLoggerManager.m in Sources */,
 				1B133CF81B847CDB0026EA24 /* MainSwift.swift in Sources */,
 				1BA53E401A54DC1B00B9343F /* BDKNotifyHUD.m in Sources */,
 				1BDDF17B1AD5153800909CEF /* NetworkEngine.m in Sources */,
@@ -754,6 +772,7 @@
 				1B7E8E621A5AAF3C00BC6796 /* XHDrawerController.m in Sources */,
 				1B48D7A11A53EC400047EA5F /* HomePresentViewController.m in Sources */,
 				1BDDF1721AD4C3F100909CEF /* UIImageView+MKNetworkKitAdditions.m in Sources */,
+				1BF41C611B95AABC0056A703 /* PARSLoggerFormatter.m in Sources */,
 				1B7E8E631A5AAF3C00BC6796 /* XHZoomDrawerView.m in Sources */,
 				1B48D7A51A53EC400047EA5F /* HomeViewController.m in Sources */,
 				1BF3A2401B8426D800593002 /* AutoLayloutViewController.m in Sources */,
