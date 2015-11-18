@@ -41,6 +41,7 @@
 		1BA53E401A54DC1B00B9343F /* BDKNotifyHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BA53E3F1A54DC1B00B9343F /* BDKNotifyHUD.m */; };
 		1BBD5B8C1AA6DF230052D7CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BBD5B8A1AA6DF080052D7CD /* CoreLocation.framework */; };
 		1BBF420D1A8B302F0065B55D /* WovenStar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BBF420C1A8B302F0065B55D /* WovenStar.m */; };
+		1BD57FF61BDE0CB4009B2C99 /* (4)-_-_-1445418332476.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BD57FF51BDE0CB4009B2C99 /* (4)-_-_-1445418332476.gif */; };
 		1BDDF16C1AD4C3F100909CEF /* NSAlert+MKNetworkKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF1571AD4C3F100909CEF /* NSAlert+MKNetworkKitAdditions.m */; };
 		1BDDF16D1AD4C3F100909CEF /* NSData+MKBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF1591AD4C3F100909CEF /* NSData+MKBase64.m */; };
 		1BDDF16E1AD4C3F100909CEF /* NSDate+RFC1123.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDDF15B1AD4C3F100909CEF /* NSDate+RFC1123.m */; };
@@ -145,6 +146,7 @@
 		1BBD5B8A1AA6DF080052D7CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1BBF420B1A8B302F0065B55D /* WovenStar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WovenStar.h; sourceTree = "<group>"; };
 		1BBF420C1A8B302F0065B55D /* WovenStar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WovenStar.m; sourceTree = "<group>"; };
+		1BD57FF51BDE0CB4009B2C99 /* (4)-_-_-1445418332476.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "(4)-_-_-1445418332476.gif"; path = "../../(4)-_-_-1445418332476.gif"; sourceTree = "<group>"; };
 		1BDDF1561AD4C3F100909CEF /* NSAlert+MKNetworkKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAlert+MKNetworkKitAdditions.h"; sourceTree = "<group>"; };
 		1BDDF1571AD4C3F100909CEF /* NSAlert+MKNetworkKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAlert+MKNetworkKitAdditions.m"; sourceTree = "<group>"; };
 		1BDDF1581AD4C3F100909CEF /* NSData+MKBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+MKBase64.h"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		1B48D7861A53EC400047EA5F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				1BD57FF51BDE0CB4009B2C99 /* (4)-_-_-1445418332476.gif */,
 				1B7E8E701A5ABF3E00BC6796 /* bgImg.png */,
 				1B48D7871A53EC400047EA5F /* Menubar@2x.png */,
 				1B48D7881A53EC400047EA5F /* testtttt.png */,
@@ -633,6 +636,7 @@
 				TargetAttributes = {
 					1B775E501A4844E0005EFABC = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 5S3ZF3Y5MA;
 					};
 					1B775E691A4844E0005EFABC = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -679,6 +683,7 @@
 				1B48D7A01A53EC400047EA5F /* testtttt.png in Resources */,
 				1B775E651A4844E0005EFABC /* LaunchScreen.xib in Resources */,
 				1B48D7A41A53EC400047EA5F /* HomePushViewController.xib in Resources */,
+				1BD57FF61BDE0CB4009B2C99 /* (4)-_-_-1445418332476.gif in Resources */,
 				1B775E621A4844E0005EFABC /* Images.xcassets in Resources */,
 				1B7E8E691A5AB19500BC6796 /* LeftTabViewController.xib in Resources */,
 				1BF3A2411B8426D800593002 /* AutoLayloutViewController.xib in Resources */,
@@ -899,15 +904,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Yixiong (6P6L8FM37Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/StudyProject/StudyProject-Prefix.pch";
 				INFOPLIST_FILE = StudyProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wwww.study;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7e2a5ddd-6211-46e7-af26-30731345675f";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "StudyProject/ViewControllers/mine/swift/StudyProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -919,15 +926,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Peng Yixiong (6P6L8FM37Y)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/StudyProject/StudyProject-Prefix.pch";
 				INFOPLIST_FILE = StudyProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wwww.study;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7e2a5ddd-6211-46e7-af26-30731345675f";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "StudyProject/ViewControllers/mine/swift/StudyProject-Bridging-Header.h";
 			};
 			name = Release;

@@ -72,6 +72,7 @@
     [self.window makeKeyAndVisible];
     
     [self useUIPasteboard];
+    [self setupUpThreeTouchShortCutItems];
     
     return YES;
 }
@@ -98,6 +99,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    if ([shortcutItem.localizedTitle isEqualToString:@"首页"]) {
+        
+    } else if([shortcutItem.localizedTitle isEqualToString:@"保单"]) {
+        self.mainTabViewCtr.selectedIndex = 1;
+    }
+}
+
 - (void)useUIPasteboard
 {
     UIPasteboard *plasteBoard = [UIPasteboard generalPasteboard];
@@ -119,6 +129,16 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(60 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         
     });
+}
+
+- (void)setupUpThreeTouchShortCutItems
+{
+    UIApplicationShortcutIcon *icon2 = [UIApplicationShortcutIcon iconWithType:UIApplicationShortcutIconTypeHome];
+    
+    UIApplicationShortcutItem *item1 =  [[UIApplicationShortcutItem alloc] initWithType:@"首页" localizedTitle:@"首页" localizedSubtitle:@"哈哈" icon:icon2 userInfo:nil];
+    UIApplicationShortcutItem *item2 =  [[UIApplicationShortcutItem alloc] initWithType:@"保单" localizedTitle:@"保单"];
+    
+    [[UIApplication sharedApplication] setShortcutItems:@[item1 , item2]];
 }
 
 @end

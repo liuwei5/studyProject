@@ -38,7 +38,7 @@
     myTabView.tabBarItem.title = @"我";
     myTabView.tabBarItem.image = [UIImage imageNamed:@"testtttt.png"];
     UINavigationController *myNav = [[UINavigationController alloc] initWithRootViewController:myTabView];
-
+    
     self.viewControllers = @[homeNav,policyNav,myNav];
 }
 

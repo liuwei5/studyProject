@@ -15,19 +15,17 @@
 @implementation PolicyViewController
 @synthesize webVeiwPolicy;
 
-- (void)viewWillAppear:(BOOL)animated
-{
-
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"保单";
-    
-    self.hidesBottomBarWhenPushed = YES;
-    
+    self.title = @"保单";    
     NSString *requestStr = @"http://photo.energytrust.com.cn/batch.php/Home/Mobile/index.html";
     [webVeiwPolicy loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:requestStr]]];
+    
+    //    NSURL *url = [NSURL URLWithString:@"http://test-elis-cms.pa18.com:43128/cmsinfo/upload/advert/(4)-_-_-1445418332476.jpg"];
+    //    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImageView *image  = [[UIImageView alloc] initWithFrame:CGRectMake(100, 100, 100, 100)];
+    image.image = [UIImage imageNamed:@"(4)-_-_-1445418332476"];
+    [self.view addSubview:image];
 }
 
 - (void)didReceiveMemoryWarning {

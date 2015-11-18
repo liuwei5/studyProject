@@ -129,7 +129,8 @@
         
         [vi mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.mas_equalTo(container.mas_centerX);
-            make.height.mas_equalTo(55 + arc4random() % 50);
+            //make.height.mas_equalTo(55 + arc4random() % 50);
+            make.height.mas_equalTo(tmpView);
             make.width.mas_equalTo(container.mas_width);
             if(tmpView)
                 make.top.mas_equalTo(tmpView.mas_bottom).offset(10);

@@ -25,18 +25,10 @@
 @synthesize tableViewOfMine;
 @synthesize arrData;
 
-- (void)viewWillAppear:(BOOL)animated
-{
-
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
-    
-    self.hidesBottomBarWhenPushed = YES;
-
     [self setupBaseDataPropertiesForView];
     [self setupBaseUiPropertiesForView];
 }

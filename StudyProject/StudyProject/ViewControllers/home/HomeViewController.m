@@ -29,8 +29,6 @@
 {
     self.title = @"首页";
     
-    
-    
     if(ENVIRENTMENT == 0)
     {
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"左边" style:UIBarButtonItemStylePlain target:self action:@selector(left)];
@@ -46,6 +44,7 @@
 
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor whiteColor];
     self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+    
 }
 
 - (void)left
