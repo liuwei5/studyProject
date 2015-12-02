@@ -75,9 +75,40 @@
 
 
 - (IBAction)clickPushBtn:(id)sender {
-    HomePushViewController *homePush = [[HomePushViewController alloc] init];
-    homePush.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:homePush animated:YES];
+//    HomePushViewController *homePush = [[HomePushViewController alloc] init];
+//    homePush.hidesBottomBarWhenPushed = YES;
+//    [self.navigationController pushViewController:homePush animated:YES];
+  
+    
+    //跳转到设置
+    /*
+     Notification — prefs:root=NOTIFICATI_ID
+     Phone — prefs:root=Phone
+     Photos — prefs:root=Photos
+     Profile — prefs:root=General&path=ManagedConfigurationList
+     Reset — prefs:root=General&path=Reset
+     Safari — prefs:root=Safari
+     Siri — prefs:root=General&path=Assistant
+     Sounds — prefs:root=Sounds
+     Software Update — prefs:root=General&path=SOFTWARE_UPDATE_LINK
+     Store — prefs:root=STORE
+     Twitter — prefs:root=TWITTER
+     Usage — prefs:root=General&path=USAGE
+     VPN — prefs:root=General&path=Network/VPN
+     Wallpaper — prefs:root=Wallpaper
+     Wi-Fi — prefs:root=WIFI
+     */
+    
+    NSURL *url = [NSURL URLWithString:@"prefs:root=WIFI"];
+    if ([[UIApplication sharedApplication] canOpenURL:url]) {
+        [[UIApplication sharedApplication] openURL:url];
+    }
+    else {
+        NSURL *url2 = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+        [[UIApplication sharedApplication] openURL:url2];
+    }
+
+    
 }
 
 - (IBAction)clickPresentBtn:(id)sender

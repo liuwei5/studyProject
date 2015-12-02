@@ -31,6 +31,54 @@
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     [self setupBaseDataPropertiesForView];
     [self setupBaseUiPropertiesForView];
+    
+    dispatch_sync(dispatch_get_global_queue(0, 0), ^{
+        
+    });
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+    });
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        
+    });
+    
+    //延迟
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^{
+        
+    });
+    
+    //自定义
+    dispatch_queue_t user_queue = dispatch_queue_create("addd", NULL);
+    dispatch_async(user_queue, ^{
+        
+    });
+    
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        
+    });
+    dispatch_group_async(group, dispatch_get_global_queue(0, 0), ^{
+        
+    });
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSURL *url = [NSURL URLWithString:@"http://avatar.csdn.net/2/C/D/1_totogo2010.jpg"];
+        NSData *data = [[NSData alloc] initWithContentsOfURL:url];
+        UIImage *image = [[UIImage alloc] initWithData:data];
+        if (nil != data) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"%@" , data);
+            });
+        }
+    });
+    
 }
 
 - (void)setupBaseDataPropertiesForView
